@@ -1,15 +1,4 @@
 import { useLoaderData } from "react-router";
-import { fetchParks, fetchThingsToDo } from '../api/npsApi.ts';
-
-export async function loader() {
-    const[parkData, thingsToDoData] = await Promise.all([
-        fetchParks('nj'),
-        fetchThingsToDo('acad')
-    ])
-
-    return {parkData, thingsToDoData};
-
-}
 
 export default function ApiTest() {
     const {parkData, thingsToDoData} = useLoaderData();

@@ -2,13 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
-import App from './App.tsx'
-import ApiTest, { loader as apiTestLoader } from './pages/test.api.tsx'
+import Home from './pages/Home'
+import ApiTest from './pages/test.api'
+import { loader as apiTestLoader } from './pages/test.api.loader'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Home />,
   },
   {
     path: '/test-api',

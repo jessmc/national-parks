@@ -5,13 +5,11 @@ console.log(API_KEY);
 const headers = { 'X-Api-Key': API_KEY };
 
 export async function fetchParks(stateCode?: string) {
-    const params = new URLSearchParams({ limit: '50' });
-    if (stateCode) params.set('stateCode', stateCode);
-    const res = await fetch(`${BASE_URL}/parks?${params}`, {headers});
-
-    if (!res.ok) throw new Error(`fetchParks failed: ${res.status} ${res.statusText}`);
-
-    return res.json();
+  const params = new URLSearchParams({ limit: '500' }) // ← bump this up
+  if (stateCode) params.set('stateCode', stateCode)
+  const res = await fetch(`${BASE_URL}/parks?${params}`, { headers })
+  if (!res.ok) throw new Error(`fetchParks failed: ${res.status} ${res.statusText}`)
+  return res.json()
 }
 
 export async function fetchThingsToDo(parkCode: string) {
