@@ -9,42 +9,55 @@
   flex-wrap: wrap;
 }
 
-.searchInput {
-  flex: 1;
-  min-width: 200px;
-  height: 38px;
-  padding: 0 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #111;
-  background: white;
-
-  &:focus {
-    outline: none;
-    border-color: #6b7280;
-  }
-}
-
+.searchInput,
 .stateSelect {
   height: 38px;
   padding: 0 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--color-bg-border);
   border-radius: 8px;
   font-size: 14px;
-  color: #111;
-  background: white;
-  cursor: pointer;
+  color: var(--color-text-primary);
+  background: var(--color-bg-elevated);
 
   &:focus {
     outline: none;
-    border-color: #6b7280;
+    border-color: var(--color-green-secondary);
+  }
+
+  option {
+    background: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+  }
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 200px;
+
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
+}
+
+.clearButton {
+  height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--color-bg-border);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  background: transparent;
+  transition: color 0.15s, border-color 0.15s;
+
+  &:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-green-secondary);
   }
 }
 
 .count {
   font-size: 13px;
-  color: #6b7280;
+  color: var(--color-text-muted);
   margin-bottom: 16px;
 }
 
@@ -58,5 +71,5 @@
   padding: 4rem 0;
   text-align: center;
   font-size: 14px;
-  color: #6b7280;
+  color: var(--color-text-muted);
 }

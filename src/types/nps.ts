@@ -62,3 +62,31 @@ export interface NpsApiResponse<T> {
     limit: string
     start: string
 }
+
+export interface ThingToDo {
+    id: string
+    title: string
+    shortDescription: string
+    activityDescription: string
+    images: ParkImage[]
+    activity: ParkActivity[]
+    url: string
+}
+
+export interface VisitorCenter {
+    id: string
+    name: string
+    description: string
+    directionsInfo: string
+    addresses: ParkAddress[]
+    operatingHours: OperatingHours[]
+    url: string
+}
+
+export interface Alert {
+    id: string
+    title: string
+    description: string
+    category: string
+    url: string
+}

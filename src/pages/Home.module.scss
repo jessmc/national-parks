@@ -1,0 +1,36 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.loading {
+  padding: 2rem;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.error {
+  padding: 2rem;
+  color: var(--color-amber-light);
+  font-size: 14px;
+}

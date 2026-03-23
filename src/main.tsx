@@ -5,11 +5,16 @@ import './index.css'
 import Home from './pages/Home'
 import ApiTest from './pages/test.api'
 import { loader as apiTestLoader } from './pages/test.api.loader'
+import ParkDetail from './pages/ParkDetail'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
+  },
+  {
+    path: '/parks/:parkCode',
+    element: <ParkDetail />
   },
   {
     path: '/test-api',
