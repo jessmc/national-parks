@@ -61,7 +61,7 @@ export default function ParkGrid({ parks }: ParkGridProps) {
             </option>
           ))}
         </select>
-        <button onClick={clearSearch}>Clear</button>
+        <button onClick={clearSearch} className={styles.clearButton}>Clear</button>
       </div>
 
       <p className={styles.count}>

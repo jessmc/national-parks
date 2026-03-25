@@ -1,7 +1,6 @@
 
 const BASE_URL = 'https://developer.nps.gov/api/v1';
 const API_KEY = import.meta.env.VITE_NPS_API_KEY;
-console.log(API_KEY);
 const headers = { 'X-Api-Key': API_KEY };
 
 export async function fetchParks(stateCode?: string) {

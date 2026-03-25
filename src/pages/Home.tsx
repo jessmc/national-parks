@@ -15,7 +15,12 @@ export default function Home() {
     <div className={styles.page}>
       <div className={styles.header}>
         <p className={styles.eyebrow}>Explore America's wild places</p>
-        <h1 className={styles.title}>National Parks</h1>
+
+        <h1 className={styles.title}>
+          <span className="material-symbols-outlined" style={{ margin: '0 10px 0 0'}}>
+          forest
+          </span>
+          National Parks</h1>
       </div>
 
       {status === 'granted' && nearest.length > 0 && (

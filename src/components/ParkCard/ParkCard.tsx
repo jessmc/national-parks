@@ -18,10 +18,18 @@ export default function ParkCard({ park }: ParkCardProps) {
                 : 'No entrance fee';
 
     function handleClick() {
-        if (!isFlipped) {
-            setIsFlipped(true);
+        const isTouchDevice = window.matchMedia('(hover: none)').matches
+
+        if (isTouchDevice) {
+            // mobile: first tap flips, second tap navigates
+            if (isFlipped) {
+            navigate(`/parks/${park.parkCode}`)
+            } else {
+            setIsFlipped(true)
+            }
         } else {
-            navigate(`/parks/${park.parkCode}`);
+            // desktop: card is already flipped via CSS hover, click always navigates
+            navigate(`/parks/${park.parkCode}`)
         }
     }
 
